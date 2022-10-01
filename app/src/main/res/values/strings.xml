@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string-array name="Titles">
+        <item>Grocery stores</item>
+        <item>Fruits</item>
+        <item>Vegetables</item>
+        <item>Meat</item>
+        <item>Fish</item>
+        <item>Chicken</item>
+        <item>Milk</item>
+        <item>cheese</item>
+        <item>Nuts &amp; dried fruits</item>
+        <item>Coffee</item>
+    </string-array>
+    <string-array name="description">
+        <item>You can get what you need</item>
+        <item>You can get what you need</item>
+        <item>You can get what you need</item>
+        <item>You can get what you need</item>
+        <item>You can get what you need</item>
+        <item>You can get what you need</item>
+        <item>You can get what you need</item>
+        <item>You can get what you need</item>
+        <item>You can get what you need</item>
+        <item>You can get what you need</item>
+
+    </string-array>
+</resources>
