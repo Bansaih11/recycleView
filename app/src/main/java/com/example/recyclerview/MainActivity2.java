@@ -1,11 +1,11 @@
 package com.example.recyclerview;
 
 import android.content.Intent;
-import android.icu.text.CaseMap;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -22,6 +22,10 @@ public class MainActivity2 extends AppCompatActivity {
         TextView title = findViewById(R.id.txtTitle2);
         TextView Description = findViewById(R.id.txtdescription2);
         ImageView imageView2 = findViewById(R.id.imageView2);
+
+        title.setText(Title);
+        Description.setText(description);
+        imageView2.setImageResource(image);
 
     }
 

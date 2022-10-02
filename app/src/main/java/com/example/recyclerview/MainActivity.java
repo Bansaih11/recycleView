@@ -12,11 +12,11 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements RecyclerViewInterface {
    ArrayList<MarketModel> marketModels=new ArrayList<>();
-   int[] Images={R.drawable.ic_launcher_background,R.drawable.ic_launcher_foreground,
-           R.drawable.ic_launcher_background,R.drawable.ic_launcher_foreground,
-           R.drawable.ic_launcher_background,R.drawable.ic_launcher_foreground,
-           R.drawable.ic_launcher_background,R.drawable.ic_launcher_foreground,
-           R.drawable.ic_launcher_background,R.drawable.ic_launcher_foreground};
+   int[] Images={R.drawable.store,R.drawable.fruits,
+           R.drawable.vegetables,R.drawable.meat,
+           R.drawable.fish,R.drawable.chicken,
+           R.drawable.milk,R.drawable.cheese,
+           R.drawable.nuts,R.drawable.coffee};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
