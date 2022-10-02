@@ -4,11 +4,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import java.util.ArrayList;
 
@@ -36,12 +39,13 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
     }
 
     @Override
-    public  void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, int position) {
+    public  void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
      // assigning values to the view we createed in row_layout file
         // based on the position of recycler view
         holder.Title.setText(marketModels.get(position).getTitle());
         holder.description.setText(marketModels.get(position).getDescription());
         holder.imageView.setImageResource(marketModels.get(position).getImage());
+
     }
 
     @Override
@@ -54,12 +58,13 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
         // like in oncreate method
         ImageView imageView;
         TextView Title,description;
+        CardView cardView;
         public MyViewHolder(@NonNull View itemView,RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             imageView=itemView.findViewById(R.id.imageView);
             Title=itemView.findViewById(R.id.txtTitle);
             description=itemView.findViewById(R.id.txtdescription);
-
+            cardView=itemView.findViewById(R.id.cardView);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
