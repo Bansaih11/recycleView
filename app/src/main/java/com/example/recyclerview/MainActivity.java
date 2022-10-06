@@ -12,6 +12,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements RecyclerViewInterface {
    ArrayList<MarketModel> marketModels=new ArrayList<>();
+
+    RecyclerViewAdapter adapter;
+
    int[] Images={R.drawable.store,R.drawable.fruits,
            R.drawable.vegetables,R.drawable.meat,
            R.drawable.fish,R.drawable.chicken,
@@ -23,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
         setContentView(R.layout.activity_main);
         RecyclerView recyclerView=findViewById(R.id.myRv);
         setMarketModels();
-        RecyclerViewAdapter adapter= new RecyclerViewAdapter(this,marketModels,this);
+        RecyclerViewAdapter adapter=new RecyclerViewAdapter(this,marketModels,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -44,5 +47,11 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
 
         startActivity(intent);
 
+    }
+
+    @Override
+    public void onItemLongClick(int position) {
+       marketModels.remove(position);
+       adapter.notifyItemRemoved(position);
     }
 }
