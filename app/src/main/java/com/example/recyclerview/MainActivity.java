@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
         setContentView(R.layout.activity_main);
         RecyclerView recyclerView=findViewById(R.id.myRv);
         setMarketModels();
-        RecyclerViewAdapter adapter=new RecyclerViewAdapter(this,marketModels,this);
+        adapter=new RecyclerViewAdapter(this,marketModels,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
